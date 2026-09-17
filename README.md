@@ -138,7 +138,3 @@ App will be available at `http://localhost:5173`.
 | DELETE | `/deleteTodo/:todoId` | Delete a todo |
 
 All routes except register/login require a valid access token, sent either as an `AccessToken` cookie or an `Authorization: Bearer <token>` header.
-
-## License
-
-MIT
