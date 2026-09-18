@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <header className="flex items-center justify-between gap-4 px-6 py-4 border-b border-gray-200 bg-white">
       <Link to="/" className="text-xl font-semibold tracking-tight text-gray-900">
-        todo
+        Todo
       </Link>
 
       {user && (

@@ -37,7 +37,7 @@ export default function Profile() {
     <>
       <div className="mb-6">
         <h1 className="text-3xl font-semibold tracking-tight text-gray-900">Account</h1>
-        <p className="text-gray-500 mt-1">Naam aur email yahan se badlein.</p>
+        <p className="text-gray-500 mt-1">You can change here your name and email.</p>
       </div>
 
       {note.text && (

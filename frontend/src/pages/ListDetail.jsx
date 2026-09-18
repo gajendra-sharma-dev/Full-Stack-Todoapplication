@@ -84,7 +84,7 @@ export default function ListDetail() {
   }
 
   const removeTodo = async (id) => {
-    if (!confirm("Ye todo delete kar dein?")) return
+    if (!confirm("Do you want to delete this Todo?")) return
     try {
       await api.delete(`/todo/deleteTodo/${id}`)
       setTodos((prev) => prev.filter((t) => t._id !== id))
@@ -103,7 +103,7 @@ export default function ListDetail() {
   return (
     <>
       <Link to="/" className="inline-block mb-4 text-sm text-emerald-700">
-        ← Saari lists
+        ← lists
       </Link>
 
       <div className="mb-6">
@@ -120,7 +120,7 @@ export default function ListDetail() {
             <input
               value={form.title}
               onChange={(e) => setForm({ ...form, title: e.target.value })}
-              placeholder="Doodh lana hai"
+              placeholder="Playing cricket"
               required
               className={inputClass}
             />
@@ -130,7 +130,7 @@ export default function ListDetail() {
             <input
               value={form.description}
               onChange={(e) => setForm({ ...form, description: e.target.value })}
-              placeholder="Shaam tak"
+              placeholder="at night"
               required
               className={inputClass}
             />
@@ -176,7 +176,7 @@ export default function ListDetail() {
       </div>
 
       {shown.length === 0 ? (
-        <p className="text-gray-500 py-6">Yahan abhi kuch nahi hai.</p>
+        <p className="text-gray-500 py-6">Nothing Here.</p>
       ) : (
         <ul className="flex flex-col gap-3">
           {shown.map((todo) => (

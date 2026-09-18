@@ -17,14 +17,14 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     const data = err.response?.data
-    let message = "Kuch galat ho gaya. Dobara koshish karein."
+    let message = "Something went wrong.Please try again."
     if (typeof data === "string") {
       const m = data.match(/<pre>Error: (.*?)<br>/)
       if (m) message = m[1]
     } else if (data?.message) {
       message = data.message
     } else if (err.message === "Network Error") {
-      message = "Server se connection nahi ban raha."
+      message = "Unable to connect to the server"
     }
     return Promise.reject(new Error(message))
   }

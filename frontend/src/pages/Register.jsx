@@ -30,10 +30,10 @@ export default function Register() {
   return (
     <div className="max-w-sm mx-auto mt-10">
       <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
-        Account banayein.
+    Create Account.
       </h1>
       <p className="text-gray-500 mt-1 mb-6">
-        Naam lowercase me save hota hai, isliye login me bhi wahi likhein.
+        
       </p>
 
       <form onSubmit={submit} className="bg-white border border-gray-200 rounded-lg p-5 flex flex-col gap-3">
@@ -82,7 +82,7 @@ export default function Register() {
       </form>
 
       <p className="text-center text-gray-500 mt-4 text-sm">
-        Pehle se account hai? <Link to="/login" className="text-emerald-700">Sign in</Link>
+        You already have an Account? <Link to="/login" className="text-emerald-700">Login in</Link>
       </p>
     </div>
   )

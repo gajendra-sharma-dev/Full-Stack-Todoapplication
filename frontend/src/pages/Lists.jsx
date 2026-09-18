@@ -52,7 +52,7 @@ export default function Lists() {
   }
 
   const removeList = async (id) => {
-    if (!confirm("Ye list delete kar dein?")) return
+    if (!confirm("You wants to delete this todo?")) return
     try {
       await api.delete(`/todos/deletetodoList/${id}`)
       setLists((prev) => prev.filter((l) => l._id !== id))
@@ -67,8 +67,8 @@ export default function Lists() {
   return (
     <>
       <div className="mb-6">
-        <h1 className="text-3xl font-semibold tracking-tight text-gray-900">Aapki lists</h1>
-        <p className="text-gray-500 mt-1">Har list ke andar uske todos rehte hain.</p>
+        <h1 className="text-3xl font-semibold tracking-tight text-gray-900">Your lists</h1>
+        <p className="text-gray-500 mt-1">Now you add a todoList and add todos in todolist.</p>
       </div>
 
       <form
@@ -80,7 +80,7 @@ export default function Lists() {
           <input
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            placeholder="Ghar ka kaam"
+            placeholder="TodoList name"
             required
             className={inputClass}
           />
@@ -90,7 +90,7 @@ export default function Lists() {
           <input
             value={form.description}
             onChange={(e) => setForm({ ...form, description: e.target.value })}
-            placeholder="Roz ke chhote kaam"
+            placeholder="description"
             required
             className={inputClass}
           />
@@ -105,7 +105,7 @@ export default function Lists() {
       {loading ? (
         <p className="text-gray-500 py-6">Loading…</p>
       ) : lists.length === 0 ? (
-        <p className="text-gray-500 py-6">Abhi koi list nahi hai. Upar se pehli list banayein.</p>
+        <p className="text-gray-500 py-6">Nothing Here.</p>
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {lists.map((list) => (

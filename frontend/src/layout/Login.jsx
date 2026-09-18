@@ -28,9 +28,9 @@ export default function Login() {
   return (
     <div className="max-w-sm mx-auto mt-10">
       <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
-        Wapas aa gaye.
+        Welcome Back!
       </h1>
-      <p className="text-gray-500 mt-1 mb-6">Apni lists dekhne ke liye sign in karein.</p>
+      <p className="text-gray-500 mt-1 mb-6">Login in to view your list.</p>
 
       <form onSubmit={submit} className="bg-white border border-gray-200 rounded-lg p-5 flex flex-col gap-3">
         {/* backend login me name, email aur password teeno maangta hai */}
@@ -75,12 +75,12 @@ export default function Login() {
           disabled={busy}
           className="mt-1 bg-emerald-700 text-white rounded-md py-2 disabled:opacity-60"
         >
-          {busy ? "Signing in…" : "Sign in"}
+          {busy ? "Signing in…" : "login"}
         </button>
       </form>
 
       <p className="text-center text-gray-500 mt-4 text-sm">
-        Naya account chahiye? <Link to="/register" className="text-emerald-700">Create one</Link>
+        Create new account? <Link to="/register" className="text-emerald-700">Create one</Link>
       </p>
     </div>
   )
