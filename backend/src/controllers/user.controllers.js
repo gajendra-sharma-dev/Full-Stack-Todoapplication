@@ -13,7 +13,7 @@ const genreteAccesAndRefreshToken = async(userId) =>{
          const AccessToken = user.generateAccessToken()
          const refreshToken = user.generateRefreshToken()
     
-         user. refreshToken = refreshToken
+         user.refreshToken = refreshToken
          await user.save({validateBeforeSave:false})
     
          return {AccessToken,refreshToken}
@@ -185,7 +185,7 @@ const updateDetail = asynchandler(async(req,res) =>{
 
 
      if(!incomingRefreshToken) {  
-      throw new ApiError(410,"unauthorization request")
+      throw new ApiError(401,"unauthorization request")
      }
 
    try {
@@ -202,7 +202,7 @@ const updateDetail = asynchandler(async(req,res) =>{
    
  
        if(incomingRefreshToken !== user?.refreshToken) {
-          throw new ApiError(410,"Refresh token is expired or used")
+          throw new ApiError(401,"Refresh token is expired or used")
        }
  
        
