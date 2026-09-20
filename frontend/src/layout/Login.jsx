@@ -80,7 +80,7 @@ export default function Login() {
       </form>
 
       <p className="text-center text-gray-500 mt-4 text-sm">
-        You already have an Account? <Link to="/register" className="text-emerald-700">Login</Link>
+        Create new account for sign-in? <Link to="/register" className="text-emerald-700">Create one</Link>
       </p>
     </div>
   )
