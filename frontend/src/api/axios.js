@@ -17,7 +17,7 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     const data = err.response?.data
-    let message = "Account not found,Please sign up first"
+    let message = "Something went wrong. Please try again."
     if (typeof data === "string") {
       const m = data.match(/<pre>Error: (.*?)<br>/)
       if (m) message = m[1]
