@@ -30,7 +30,7 @@ export default function Login() {
       <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
         Welcome Back!
       </h1>
-      <p className="text-gray-500 mt-1 mb-6">Login in to view your list.</p>
+      <p className="text-gray-500 mt-1 mb-6">Login to view your list.</p>
 
       <form onSubmit={submit} className="bg-white border border-gray-200 rounded-lg p-5 flex flex-col gap-3">
         {/* backend login me name, email aur password teeno maangta hai */}
