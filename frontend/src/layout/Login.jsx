@@ -75,7 +75,7 @@ export default function Login() {
           disabled={busy}
           className="mt-1 bg-emerald-700 text-white rounded-md py-2 disabled:opacity-60"
         >
-          {busy ? "Signing in…" : "login"}
+          {busy ? "Login..." : "login"}
         </button>
       </form>
 
